@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="jp">
+<head>
+  <meta charset="utf-8">
+
+  <title>PFC Balance</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link type="text/css" rel="stylesheet" href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-header">
+      <h1>PFC Balance Record</h1>
+      <p>Today PFC Balance Record</p>
+    </div>
+    
+    <div class="form-wrapper">
+      <form action="/create" method="post">
+        <p class="form-label">Date</p>
+        <input type="date" name="inputData">
+
+        <p class="form-label">Food</p>
+        <input type="text" name="inputData">
+
+        <p class="form-label">Calorie</p>
+        <input type="number" step="0.01" name="inputData">
+
+        <p class="form-label">Gram</p>
+        <input type="number" step="0.01" name="inputData">
+
+        <p class="form-label">Protein</p>
+        <input type="number" step="0.01" name="inputData">
+
+        <p class="form-label">Fat</p>
+        <input type="number" step="0.01" name="inputData">
+
+        <p class="form-label">Carbohydrate</p>
+        <input type="number" step="0.01" name="inputData">
+
+        <input type="submit" value="Create!">
+      </form>
+    </div>
+    <a href="/index" class="cancel-btn">Back</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="jp">
+<head>
+  <meta charset="utf-8">
+
+  <title>PFC Balance</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link type="text/css" rel="stylesheet" href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-header">
+      <h1>PFC Balance Record</h1>
+    </div>
+
+    <div class="table-container">
+      <div class="table-pfc">
+        <a href="/new" class="new-btn">+Add</a>
+        <div class="table-head">
+          <!--日付カラム-->
+            <span class="column-date">Date</span>
+        
+          <!--食品カラム-->
+            <span class="column-food">Food</span>
+          
+          <!--カロリーカラム-->
+            <span class="column-calorie">Calorie</span>
+          
+          <!--グラムカラム-->
+            <span class="column-gram">Gram</span>
+          
+          <!--プロテインカラム-->
+            <span class="column-protein">Protein</span>
+  
+          <!--脂質カラム-->
+            <span class="column-fat">Fat</span>
+        
+          <!--炭水化物カラム-->
+            <span class="column-carbohydrate">Carbohydrate</span>
+
+        </div><!--table-head-->
+
+        
+        <!--ここにデータベース内容-->
+        <ul class="table-body">
+          <% pfcbalance.forEach((pfcbalancedata) => { %>
+            <li>
+              <div class="table-body-record">
+                <span class="column-date"><%= pfcbalancedata.date %></span>
+                <span class="column-food"><%= pfcbalancedata.food %></span>
+                <span class="column-calorie"><%= pfcbalancedata.calorie %>kcal</span>
+                <span class="column-gram"><%= pfcbalancedata.gram %>g</span>
+                <span class="column-protein"><%= pfcbalancedata.protein %>g</span>
+                <span class="column-fat"><%= pfcbalancedata.fat %>g</span>
+                <span class="column-carbohydrate"><%= pfcbalancedata.carbohydrate %>g</span>
+              </div>
+            </li>
+          <% }); %>
+          </ul>
+
+      </div><!--table-pfc-->
+    </div><!--table-container-->
+  </div>
+</body>
+</html>
